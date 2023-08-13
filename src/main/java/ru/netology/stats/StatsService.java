@@ -47,14 +47,14 @@ public class StatsService {
         return monthCounter;
     }
 
-    public int monthsUnderAverage(long[] sales) { // 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
-        int monthUnderCounter = 0;
+    public int monthsAboveAverage(long[] sales) { // 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
+        int monthAboveCounter = 0;
         long averageSale = average(sales);
         for (long sale : sales) {
             if (sale > averageSale) {
-                monthUnderCounter++;
+                monthAboveCounter++;
             }
         }
-        return monthUnderCounter;
+        return monthAboveCounter;
     }
 }
